@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies (optional)
         # Uncomment and adjust if needed
         run: |
-          npm install  # Assuming dependencies are installed on the runner directly
+          cd /home/azureuser/SutradharMain/android && npm install  # Assuming dependencies are installed on the runner directly
 
       - name: Build Android release
         run: |
