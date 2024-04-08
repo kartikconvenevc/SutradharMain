@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: android-release-apk
-          path: android/app/build/outputs/apk/release/  # Adjust path based on your project structure
+          path: /home/azureuser/SutradharMain/android/app/build/outputs/apk/release/  # Adjust path based on your project structure
