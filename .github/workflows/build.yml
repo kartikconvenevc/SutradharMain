@@ -2,33 +2,26 @@ name: React Native Build (Android)
 
 on:
   push:
-    branches: [ main ]  # Change to your branch name(s)
+    branches: [ main ]
 
 jobs:
   build-android:
-    runs-on: ubuntu-latest  # Or your preferred runner
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3  # Fetches code from your repository
 
-      - name: Connect to SSH server
-        uses: gr2m/github-actions-ssh@v2
-        with:
-          host: ${{ secrets.SERVER_HOST }}  # Replace with your VM server's hostname
-          username: ${{ secrets.SERVER_USERNAME }}  # Replace with your SSH username
-          key: ${{ secrets.SERVER_SSH_KEY }}  # Encrypted private SSH key (see next step)
-
       - name: Install dependencies (optional)
         # Uncomment and adjust if needed
         run: |
-          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cd SutradharMain && npm install"
+          npm install  # Assuming dependencies are installed on the runner directly
 
       - name: Build Android release
         run: |
-          ssh ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cd SutradharMain && ./gradlew clean && ./gradlew assembleRelease"
+          ./gradlew clean && ./gradlew assembleRelease  # Execute directly on the runner
 
       - name: Upload artifacts (optional)
         uses: actions/upload-artifact@v3
         with:
           name: android-release-apk
-          path: ${{ secrets.SERVER_HOST }}/SutradharMain/android/app/build/outputs/apk/release/  # Adjust path based on your project structure
+          path: android/app/build/outputs/apk/release/  # Adjust path based on your project structure
