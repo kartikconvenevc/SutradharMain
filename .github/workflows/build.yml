@@ -18,7 +18,7 @@ jobs:
 
       - name: Build Android release
         run: |
-          ./gradlew clean && ./gradlew assembleRelease  # Execute directly on the runner
+          cd /home/azureuser/SutradharMain/android && ./gradlew clean && ./gradlew assembleRelease
 
       - name: Upload artifacts (optional)
         uses: actions/upload-artifact@v3
