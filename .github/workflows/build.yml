@@ -9,12 +9,16 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3  # Fetches code from your repository
+      - uses: actions/checkout@v3  # 
+
+      - name: Git pull
+        run: |
+          git pull
 
       - name: Install dependencies (optional)
-        # Uncomment and adjust if needed
+        # Uncomment 
         run: |
-          npm install  # Assuming dependencies are installed on the runner directly
+          npm install  # 
 
       - name: Build Android release
         run: |
