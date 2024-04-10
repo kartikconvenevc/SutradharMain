@@ -13,7 +13,7 @@ jobs:
 
       - name: Git pull
         run: |
-          git pull
+          cd /home/azureuser/SutradharMain/ && git pull
 
       - name: Install dependencies (optional)
         # Uncomment 
