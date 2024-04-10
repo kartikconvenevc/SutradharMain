@@ -33,7 +33,7 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity
         style={[styles.button, styles.button1]}
         onPress={() => handleAppStart('SutradharForm')}>
-        <Text style={styles.buttonText}>Form App</Text>
+        <Text style={styles.buttonText}>App1</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
