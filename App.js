@@ -33,25 +33,25 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity
         style={[styles.button, styles.button1]}
         onPress={() => handleAppStart('SutradharForm')}>
-        <Text style={styles.buttonText}>App1</Text>
+        <Text style={styles.buttonText}>Form App</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.button2]}
         onPress={() => handleAppStart('SutradharCounter')}>
-        <Text style={styles.buttonText}>App2</Text>
+        <Text style={styles.buttonText}>Counter App</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.button3]}
         onPress={() => handleAppStart('IconApp')}>
-        <Text style={styles.buttonText}>App3</Text>
+        <Text style={styles.buttonText}>Change Icon</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, styles.button4]}
         onPress={() => handleAppStart('VoiceText')}>
-        <Text style={styles.buttonText}>App4</Text>
+        <Text style={styles.buttonText}>Voice to text</Text>
       </TouchableOpacity>
 
     </View>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#61ff6f',
   },
   button4: {
-    backgroundColor: '#f1ff6f',
+    backgroundColor: '#fdc100',
   },
 });
 
