@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies (optional)
         # Uncomment 
         run: |
-          sudo sh -c 'cd /home/azureuser/SutradharMain/ && rm -rf node_modules/ &&npm install --force'  # 
+          sudo sh -c 'cd /home/azureuser/SutradharMain/ && npm install'  # 
 
       - name: Build Android release
         run: |
