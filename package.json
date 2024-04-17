@@ -23,6 +23,7 @@
     "sutradhar-app-library": "^1.0.1",
     "sutradhar-dynamic-icons-library": "^1.0.0",
     "sutradhar-second-library": "^1.0.0",
+    "sutradhar-voice-form": "^1.0.0",
     "sutradhar-voice-text": "^1.0.1"
   },
   "devDependencies": {

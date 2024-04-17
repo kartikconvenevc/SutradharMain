@@ -6,6 +6,7 @@ import SutradharForm from "sutradhar-app-library";
 import SutradharCounter from "sutradhar-second-library";
 import IconApp from "sutradhar-dynamic-icons-library";
 import { VoiceText } from "sutradhar-voice-text";
+import { VoiceForm } from "sutradhar-voice-form";
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ const App = () => {
         <Stack.Screen name="SutradharCounter" component={SutradharCounter} />
         <Stack.Screen name="IconApp" component={IconApp} />
         <Stack.Screen name="VoiceText" component={VoiceText} />
+        <Stack.Screen name="VoiceForm" component={VoiceForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -52,6 +54,12 @@ const HomeScreen = ({ navigation }) => {
         style={[styles.button, styles.button4]}
         onPress={() => handleAppStart('VoiceText')}>
         <Text style={styles.buttonText}>Voice to text</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={[styles.button, styles.button5]}
+        onPress={() => handleAppStart('VoiceForm')}>
+        <Text style={styles.buttonText}>Voice Form</Text>
       </TouchableOpacity>
 
     </View>
@@ -89,6 +97,9 @@ const styles = StyleSheet.create({
   },
   button4: {
     backgroundColor: '#fdc100',
+  },
+  button5: {
+    backgroundColor: '#001524',
   },
 });
 
