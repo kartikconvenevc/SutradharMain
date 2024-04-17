@@ -6,7 +6,7 @@ import SutradharForm from "sutradhar-app-library";
 import SutradharCounter from "sutradhar-second-library";
 import IconApp from "sutradhar-dynamic-icons-library";
 import { VoiceText } from "sutradhar-voice-text";
-import { VoiceForm } from "sutradhar-voice-form";
+import  VoiceForm  from "sutradhar-voice-form";
 
 const Stack = createStackNavigator();
 
